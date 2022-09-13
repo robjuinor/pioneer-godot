@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 13.7884, 10 )
+
+[node name="Paredes" type="Node"]
+
+[node name="Parede1" type="StaticBody2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parede1"]
+position = Vector2( 960.389, 1.78181 )
+scale = Vector2( 69.512, 2 )
+shape = SubResource( 5 )
+
+[node name="Parede2" type="StaticBody2D" parent="."]
+position = Vector2( 0, 1060.04 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parede2"]
+position = Vector2( 960.389, 1.78181 )
+scale = Vector2( 69.512, 2 )
+shape = SubResource( 5 )
+
+[node name="Parede3" type="StaticBody2D" parent="."]
+position = Vector2( 10.4898, -9.93476 )
+rotation = 1.5708
+scale = Vector2( 0.566622, 1.07346 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parede3"]
+position = Vector2( 960.389, 1.78181 )
+scale = Vector2( 69.512, 2 )
+shape = SubResource( 5 )
+
+[node name="Parede4" type="StaticBody2D" parent="."]
+position = Vector2( 1916.49, -9.93476 )
+rotation = 1.5708
+scale = Vector2( 0.566622, 1.07346 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parede4"]
+position = Vector2( 960.389, 1.78181 )
+scale = Vector2( 69.512, 2 )
+shape = SubResource( 5 )

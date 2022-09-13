@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://cenas/ObstaculoMovel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://cenas/robo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://cenas/Circulo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://recursos/imagens/obstaculo2.png" type="Texture" id=4]
+[ext_resource path="res://recursos/imagens/obstaculo1.png" type="Texture" id=5]
+[ext_resource path="res://cenas/Paredes.tscn" type="PackedScene" id=6]
+[ext_resource path="res://cenas/Fundo.tscn" type="PackedScene" id=7]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="Game" type="Node"]
+
+[node name="Fundo" parent="." instance=ExtResource( 7 )]
+
+[node name="ObstaculoMovel" parent="." instance=ExtResource( 1 )]
+
+[node name="robo" parent="." instance=ExtResource( 2 )]
+
+[node name="Circulo" parent="." instance=ExtResource( 3 )]
+
+[node name="Circulo2" type="StaticBody2D" parent="."]
+position = Vector2( 1023.66, 418.171 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Circulo2"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Circulo2"]
+position = Vector2( 0.73999, 0 )
+scale = Vector2( 17.499, 17.499 )
+shape = SubResource( 1 )
+
+[node name="Circulo3" type="StaticBody2D" parent="."]
+position = Vector2( 381.1, 231.233 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Circulo3"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Circulo3"]
+position = Vector2( 0.73999, 0 )
+scale = Vector2( 17.499, 17.499 )
+shape = SubResource( 1 )
+
+[node name="Quadrado" type="StaticBody2D" parent="."]
+position = Vector2( 1705, 857.115 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Quadrado"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Quadrado"]
+scale = Vector2( 17.96, 17.96 )
+shape = SubResource( 2 )
+
+[node name="Paredes" parent="." instance=ExtResource( 6 )]

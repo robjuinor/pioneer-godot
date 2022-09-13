@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://recursos/imagens/obstaculo2.png" type="Texture" id=1]
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( -362.755, -356.838, 365.461, -356.838, 365.461, 351.197, -362.755, 352.879 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10.1732, 10 )
+
+[node name="Quadrado" type="StaticBody2D"]
+position = Vector2( 739.989, 798.852 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite"]
+scale = Vector2( 1.01573, 1.01573 )
+occluder = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.89093, -0.890869 )
+scale = Vector2( 17.9001, 17.9001 )
+shape = SubResource( 1 )
